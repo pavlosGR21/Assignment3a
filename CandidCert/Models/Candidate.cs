@@ -33,30 +33,30 @@ namespace CandidCert.Models
         public string City { get; set; }
         public int PostalCode { get; set; }
         public int MobileNumber { get; set; }
-        public string LandlineNumnber { get; set; }
+        public int LandlineNumnber { get; set; }
 
-        public Candidate( string FirstName, string MiddleName, string LastName, string Gender, string Languange,
-                         DateTime Birthdate, string PhotoIdType, int PhotoIdNumber, DateTime PhotoIdDate, string Email, string Address1, 
-                         int Address2, string Country, string State, string City, int PostalCode, int MobileNumber, int LandlineNumber) 
+        public Candidate( string firstName, string middleName, string lastName, string gender, string languange,
+                         DateTime birthdate, string photoIdType, int photoIdNumber, DateTime photoIdDate, string email, string address1, 
+                         int address2, string country, string state, string city, int postalCode, int mobileNumber, int landlineNumber) 
         {
-            FirstName = FirstName;
-            MiddleName = MiddleName;
-            LastName = LastName;
-            Gender = Gender;
-            Languange = Languange;
-            Birthdate = Birthdate;
-            PhotoIdType = PhotoIdType;
-            PhotoIdNumber = PhotoIdNumber;
-            PhotoIdDate = PhotoIdDate;
-            Email = Email;
-            Address1 = Address1;
-            Address2 = Address2;
-            Country = Country;
-            State = State;
-            City = City;
-            PostalCode = PostalCode;
-            MobileNumber = MobileNumber;
-            LandlineNumber = LandlineNumber;
+            FirstName = firstName;
+            MiddleName = middleName;
+            LastName = lastName;
+            Gender = gender;
+            Language = languange;
+            Birthdate = birthdate;
+            PhotoIdType = photoIdType;
+            PhotoIdNumber = photoIdNumber;
+            PhotoIdDate = photoIdDate;
+            Email = email;
+            Address1 = address1;
+            Address2 = address2;
+            Country = country;
+            State = state;
+            City = city;
+            PostalCode = postalCode;
+            MobileNumber = mobileNumber;
+            LandlineNumnber= landlineNumber;
 
 
 
