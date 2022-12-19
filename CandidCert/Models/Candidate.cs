@@ -35,10 +35,11 @@ namespace CandidCert.Models
         public long MobileNumber { get; set; }
         public int LandlineNumnber { get; set; }
 
-        public Candidate( string firstName, string middleName, string lastName, string gender, string languange,
+        public Candidate(int candidateNumber, string firstName, string middleName, string lastName, string gender, string languange,
                          DateTime birthdate, string photoIdType, int photoIdNumber, DateTime photoIdDate, string email, string address1, 
                          int address2, string country, string state, string city, int postalCode, long mobileNumber, int landlineNumber) 
         {
+            CandidateNumber = candidateNumber;
             FirstName = firstName;
             MiddleName = middleName;
             LastName = lastName;

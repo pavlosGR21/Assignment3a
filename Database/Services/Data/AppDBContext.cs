@@ -11,6 +11,7 @@ namespace Database.Services.Data
     public class AppDBContext : DbContext
     {
         public virtual DbSet<Candidate> Candidates { get; set; }
+        public virtual DbSet<Certificate> Certificates { get; set; }
         public AppDBContext() : base("name=MyConnectionString")
         {
 

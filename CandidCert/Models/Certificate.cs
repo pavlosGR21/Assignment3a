@@ -17,22 +17,26 @@ namespace CandidCert.Models
         [Required]
         [ForeignKey("Title")]
         public int CandidateNumber { get; set; }
+        public virtual Candidate Candidate { get; set; }
+        public virtual CertTitles CertTitles { get; set; }
         public string Title { get; set; }
         [Required]
         [ForeignKey("CandidateNumber")]
        public int AssessmentTestCode { get; set; }
         public DateTime ExaminationDate { get; set; }
-        public int ScoreReportDate { get; set; }
+        public DateTime ScoreReportDate { get; set; }
         public int MaximumScore { get; set; }
         public string AssessmentResultLabel { get; set; }
-        public int PercentageScore { get; set; }
+        public int PercentageScore { get; set; } = 100;
 
        
-        public Certificate(int certificateId, int candidateNumber, string title, int assessmentTestCode, DateTime examinationDate, int scoreReportDate, int maximumScore, string assessmentResultLabel, int percentageScore)
+        public Certificate(  CertTitles certTitles, int candidateNumber, Candidate candidate int assessmentTestCode, DateTime examinationDate, DateTime scoreReportDate, int maximumScore, string assessmentResultLabel, int percentageScore)
         {
-            CertificateId = certificateId;
+            
+           
+            CertTitles = certTitles;
             CandidateNumber = candidateNumber;
-            Title = title;
+            Candidate = candidate;
             AssessmentTestCode = assessmentTestCode;
             ExaminationDate = examinationDate;
             ScoreReportDate = scoreReportDate;
