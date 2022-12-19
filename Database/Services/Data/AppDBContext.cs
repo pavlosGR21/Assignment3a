@@ -8,8 +8,12 @@ using CandidCert.Models;
 
 namespace Database.Services.Data
 {
-    public class AppDBContext :DbContext
+    public class AppDBContext : DbContext
     {
         public virtual DbSet<Candidate> Candidates { get; set; }
+        public AppDBContext() : base("name=MyConnectionString")
+        {
+
+        }
     }
 }

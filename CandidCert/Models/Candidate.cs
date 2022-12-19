@@ -32,12 +32,12 @@ namespace CandidCert.Models
         public string State { get; set; }
         public string City { get; set; }
         public int PostalCode { get; set; }
-        public int MobileNumber { get; set; }
+        public long MobileNumber { get; set; }
         public int LandlineNumnber { get; set; }
 
         public Candidate( string firstName, string middleName, string lastName, string gender, string languange,
                          DateTime birthdate, string photoIdType, int photoIdNumber, DateTime photoIdDate, string email, string address1, 
-                         int address2, string country, string state, string city, int postalCode, int mobileNumber, int landlineNumber) 
+                         int address2, string country, string state, string city, int postalCode, long mobileNumber, int landlineNumber) 
         {
             FirstName = firstName;
             MiddleName = middleName;
@@ -64,6 +64,7 @@ namespace CandidCert.Models
 
         public Candidate()
         {
+
         }
     }
 

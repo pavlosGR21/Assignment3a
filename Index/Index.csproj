@@ -61,14 +61,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AppUi\AppUi.csproj">
-      <Project>{61db0dc2-73a3-40aa-8d08-801263b97a7f}</Project>
-      <Name>AppUi</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CandidCert\CandidCert.csproj">
-      <Project>{10fa2de8-3e21-4158-a937-a6e65742807c}</Project>
-      <Name>CandidCert</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Database\Database.csproj">
       <Project>{04eb47bd-7cad-474e-ae26-7c77d2c3c270}</Project>
       <Name>Database</Name>
