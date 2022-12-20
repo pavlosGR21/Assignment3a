@@ -8,18 +8,20 @@ using System.Threading.Tasks;
 
 namespace CandidCert.Models
 {
-    [Table("CertTitles")]
-    public class CertTitles
+
+    [Table("CertTitle")]
+
+    public class CertTitle
     {
 
         [Key]
         public string Title { get; set; }
-        public CertTitles(string title)
+        public CertTitle(string title)
         {
             Title = title;
         }
 
-        public CertTitles()
+        public CertTitle()
         {
 
         }

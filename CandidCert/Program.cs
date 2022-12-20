@@ -12,7 +12,7 @@ namespace CandidCert
         static void Main(string[] args)
         {
             Candidate candidate = new Candidate();
-            
+            Console.WriteLine(candidate);
         }
     }
 }
