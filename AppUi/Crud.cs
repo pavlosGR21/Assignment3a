@@ -4,18 +4,18 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CandidCert.Models;
-using Database.Services.Data;
+using DatabaseConfig.Models;
+using DatabaseConfig.Services.Data;
 
 namespace AppUi
 {
     public class Crud
     {
-        static AppDBContext appDBContext = new AppDBContext();
+        
         //CREATE
         public static void CreateCandidate()
         {
-
+            AppDBContext appDBContext = new AppDBContext();
             Candidate createCand = new Candidate();
 
             Console.WriteLine("Enter Candidate Number");
@@ -72,20 +72,50 @@ namespace AppUi
 
             Console.WriteLine("Enter Landline Number");
             createCand.LandlineNumnber = Convert.ToInt32(Console.ReadLine());
-
+            appDBContext.Candidates.AddOrUpdate(createCand);
             appDBContext.SaveChanges();
+            Console.ReadLine();
         }
         //READ
         public static void ReadCandidate()
         {
+            AppDBContext appDBContext = new AppDBContext();
             Console.WriteLine("Type Candidate's Number");
             int CandidateNumber = Convert.ToInt32(Console.ReadLine());
             Candidate readCand= appDBContext.Candidates.Find(CandidateNumber);
-            Console.WriteLine(readCand);
+            Console.WriteLine("<------------------>");
+            Console.WriteLine(readCand.FirstName);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.LastName);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.Gender);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.Birthdate);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.PhotoIdType);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.PhotoIdNumber);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.PhotoIdDate);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.Country);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.State);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.City);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.PostalCode);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.MobileNumber);
+            Console.WriteLine("------------------");
+            Console.WriteLine(readCand.LandlineNumnber);
+            Console.WriteLine("<------------------>");
+            Console.ReadLine();
         }
         //UPDATE
         public static void UpdateCandidate()
         {
+            AppDBContext appDBContext = new AppDBContext();
             Console.WriteLine("Type Candidate's Number to update Information");
             int CandidateNumber = Convert.ToInt32(Console.ReadLine());
             Candidate updateCandidate = appDBContext.Candidates.Find(CandidateNumber);
@@ -272,10 +302,18 @@ namespace AppUi
         //DELETE
         public static void DeleteCandidate()
         {
+            AppDBContext appDBContext = new AppDBContext();
             Console.WriteLine("Type Candidate's number you want to Delete.");
             int CandidateNumber = Convert.ToInt32(Console.ReadLine());
+
+            Certificate CandidateCertificate = appDBContext.Certificates.SingleOrDefault(c => c.Candidate.CandidateNumber == CandidateNumber);
+            appDBContext.Certificates.Remove(CandidateCertificate);
+
+
             Candidate readcand = appDBContext.Candidates.Find(CandidateNumber);
             appDBContext.Candidates.Remove(readcand);
+
+            appDBContext.SaveChanges();
         }
 
        

@@ -4,10 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CandidCert.Models;
+using DatabaseConfig.Models;
 
 
-namespace Database.Services.Data
+namespace DatabaseConfig.Services.Data
 {
     public class AppDBContext : DbContext
     {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CandidCert.Models
+namespace DatabaseConfig.Models
 {
 
     [Table("Certificates")]
@@ -14,15 +14,9 @@ namespace CandidCert.Models
     {
         [Key]
         public int CertificateId { get; set; }
-        [Required]
-        [ForeignKey("Title")]
-        public int CandidateNumber { get; set; }
         public virtual Candidate Candidate { get; set; }
         public virtual CertTitle CertTitle { get; set; }
-        public string Title { get; set; }
-        [Required]
-        [ForeignKey("CandidateNumber")]
-       public int AssessmentTestCode { get; set; }
+        public int AssessmentTestCode { get; set; }
         public DateTime ExaminationDate { get; set; }
         public DateTime ScoreReportDate { get; set; }
         public int MaximumScore { get; set; }
@@ -30,12 +24,11 @@ namespace CandidCert.Models
         public int PercentageScore { get; set; } = 100;
 
        
-        public Certificate(  CertTitle certTitle, int candidateNumber, Candidate candidate ,int assessmentTestCode, DateTime examinationDate, DateTime scoreReportDate, int maximumScore, string assessmentResultLabel, int percentageScore)
+        public Certificate(  CertTitle certTitle, Candidate candidate ,int assessmentTestCode, DateTime examinationDate, DateTime scoreReportDate, int maximumScore, string assessmentResultLabel, int percentageScore)
         {
             
            
             CertTitle = certTitle;
-            CandidateNumber = candidateNumber;
             Candidate = candidate;
             AssessmentTestCode = assessmentTestCode;
             ExaminationDate = examinationDate;

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CandidCert.Models
+namespace DatabaseConfig.Models
 {
 
     [Table("CertTitle")]
@@ -15,6 +15,7 @@ namespace CandidCert.Models
     {
 
         [Key]
+        public int Id { get; set; }
         public string Title { get; set; }
         public CertTitle(string title)
         {
