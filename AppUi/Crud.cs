@@ -120,7 +120,7 @@ namespace AppUi
             int CandidateNumber = Convert.ToInt32(Console.ReadLine());
             Candidate updateCandidate = appDBContext.Candidates.Find(CandidateNumber);
             Console.WriteLine(updateCandidate);
-            Console.WriteLine("Choose the an option's number you want to make a change:\n1: First Name\n2 Middle Name");
+            Console.WriteLine("Choose the an option's number you want to make a change:\n0: First Name\n1: Middle Name\n2: Last Name\n3: Gender\n4: Languange\n5: Birthdate\n6: Photo Id Type\n7: Photo Id Number\n8: Photo Id Date\n9: Email\n10: Address\n11: Address Number\n12: Country\n13: State\n14: City\n15: Postal Code\n16: Mobile Number\n17: Landline Number");
             int options = Convert.ToInt32(Console.ReadLine());
             switch (options)
             {
