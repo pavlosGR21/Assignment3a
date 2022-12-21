@@ -141,7 +141,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                case 3:
+                case 2:
                     Console.WriteLine("Last Name");
                     updateCandidate.LastName = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -150,7 +150,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                case 4:
+                case 3:
                     Console.WriteLine("Gender");
                     updateCandidate.Gender = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -159,7 +159,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                case 5:
+                case 4:
                     Console.WriteLine("Languange");
                     updateCandidate.Language = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -168,7 +168,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                case 6:
+                case 5:
                     Console.WriteLine("Birthdate");
                     updateCandidate.Birthdate = Convert.ToDateTime(Console.ReadLine());
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -177,7 +177,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 7:
+                    case 6:
                     Console.WriteLine("Photo Id Type");
                     updateCandidate.PhotoIdType = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -186,7 +186,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 8:
+                    case 7:
                     Console.WriteLine("Photo Id Number");
                     updateCandidate.PhotoIdNumber = Convert.ToInt32(Console.ReadLine());
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -195,7 +195,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 9:
+                    case 8:
                     Console.WriteLine("Photo Id Date");
                     updateCandidate.PhotoIdDate = Convert.ToDateTime(Console.ReadLine());
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -204,7 +204,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 10:
+                    case 9:
                     Console.WriteLine("Email");
                     updateCandidate.Email = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -213,7 +213,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 11:
+                    case 10:
                     Console.WriteLine("Address");
                     updateCandidate.Address1 = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -222,7 +222,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 12:
+                    case 11:
                     Console.WriteLine("Address Number");
                     updateCandidate.Address2 = Convert.ToInt32(Console.ReadLine());
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -231,7 +231,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 13:
+                    case 12:
                     Console.WriteLine("Country");
                     updateCandidate.Country = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -240,7 +240,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 14:
+                    case 13:
                     Console.WriteLine("State");
                     updateCandidate.State = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -249,7 +249,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 15:
+                    case 14:
                     Console.WriteLine("City");
                     updateCandidate.City = Console.ReadLine();
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -258,7 +258,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 16:
+                    case 15:
                     Console.WriteLine("Postal Code");
                     updateCandidate.PostalCode = Convert.ToInt32(Console.ReadLine());
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -267,7 +267,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 17:
+                    case 16:
                     Console.WriteLine("Mobile Number");
                     updateCandidate.MobileNumber = Convert.ToInt64(Console.ReadLine());
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -276,7 +276,7 @@ namespace AppUi
                     Console.ReadLine();
                     break;
 
-                    case 18:
+                    case 17:
                     Console.WriteLine("Landline Number");
                     updateCandidate.LandlineNumnber = Convert.ToInt32(Console.ReadLine());
                     appDBContext.Candidates.AddOrUpdate(updateCandidate);
@@ -287,7 +287,7 @@ namespace AppUi
                     appDBContext.SaveChanges();
                     break;
 
-                    case 19:
+                    case 18:
                     return;
                    
 
